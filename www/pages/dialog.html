@@ -1,0 +1,13 @@
+<ion-view title="dialogs" ng-controller="DialogsCtrl as vm">
+<ion-content class="has-header">
+<button class="button button-full button-positive" ng-click="vm.alert()">Alert</button>
+<button class="button button-full button-positive"
+	ng-click="vm.confirm()">Confirm</button>
+<button class="button button-full button-positive"
+	ng-click="vm.prompt()">Prompt</button>
+<button class="button button-full button-positive" ng-click="vm.beep()">Beep</button>
+<button class="button button-full button-positive" ng-click="vm.vib()">vib</button>
+Online :{{vm.isOnline}}
+Offline :{{vm.isOffline}}
+
+</ion-content> </ion-view>

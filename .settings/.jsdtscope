@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="plugins/cordova-plugin-device/src/windows/|plugins/cordova-plugin-splashscreen/src/tizen/|plugins/cordova-plugin-console/www/|**/node_modules/*|plugins/ionic-plugin-keyboard/src/blackberry10/|plugins/cordova-plugin-splashscreen/tests/|plugins/cordova-plugin-device/tests/|plugins/cordova-plugin-statusbar/tests/|plugins/ionic-plugin-keyboard/www/ios/|hooks/after_prepare/|**/bower_components/*|plugins/cordova-plugin-device/src/ubuntu/|plugins/ionic-plugin-keyboard/src/windows/|www/lib/ionic/js/angular-ui/|plugins/cordova-plugin-device/src/firefoxos/|www/lib/|plugins/cordova-plugin-device/src/tizen/|**/*.min.js|plugins/cordova-plugin-splashscreen/www/|plugins/cordova-plugin-device/www/|www/js/|plugins/cordova-plugin-statusbar/www/|plugins/cordova-plugin-whitelist/|plugins/cordova-plugin-device/src/browser/|plugins/cordova-plugin-console/tests/|plugins/cordova-plugin-device/src/blackberry10/|plugins/cordova-plugin-splashscreen/src/browser/|www/lib/ionic/js/|plugins/ionic-plugin-keyboard/www/android/|plugins/cordova-plugin-statusbar/src/windows/|plugins/cordova-plugin-splashscreen/src/blackberry10/|www/lib/ionic/js/angular/|plugins/cordova-plugin-splashscreen/www/windows/|plugins/cordova-plugin-statusbar/src/browser/" kind="src" path=""/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="hooks/after_prepare"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-console/tests"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-console/www"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-device/src/blackberry10"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-device/src/browser"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-device/src/firefoxos"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-device/src/tizen"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-device/src/ubuntu"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-device/src/windows"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-device/tests"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-device/www"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-splashscreen/src/blackberry10"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-splashscreen/src/browser"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-splashscreen/src/tizen"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-splashscreen/tests"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|windows/|**/*.min.js" kind="src" path="plugins/cordova-plugin-splashscreen/www"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-splashscreen/www/windows"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-statusbar/src/browser"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-statusbar/src/windows"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-statusbar/tests"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-statusbar/www"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/cordova-plugin-whitelist"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/ionic-plugin-keyboard/src/blackberry10"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/ionic-plugin-keyboard/src/windows"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/ionic-plugin-keyboard/www/android"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="plugins/ionic-plugin-keyboard/www/ios"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/js"/>
+	<classpathentry excluding="ionic/js/angular-ui/|**/bower_components/*|**/node_modules/*|ionic/js/angular/|ionic/js/|**/*.min.js" kind="src" path="www/lib"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|angular-ui/|**/*.min.js|angular/" kind="src" path="www/lib/ionic/js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/ionic/js/angular"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/ionic/js/angular-ui"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
