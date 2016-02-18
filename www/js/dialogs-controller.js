@@ -1,42 +1,81 @@
 (function() {
 	'use strict';
 
-	angular.module('app').controller('DialogsCtrl',
-			[ '$cordovaDialogs','$cordovaVibration','$cordovaNetwork', DialogCtrl ]);
+	angular.module('app').controller(
+			'DialogsCtrl',
+			[ '$cordovaDialogs', '$cordovaVibration', '$cordovaNetwork',
+					'$cordovaCamera', DialogCtrl ]);
 
-	function DialogCtrl($cordovaDialogs,$cordovaVibration,$cordovaNetwork) {
+	function DialogCtrl($cordovaDialogs, $cordovaVibration, $cordovaNetwork,
+			$cordovaCamera) {
 		var vm = this;
-		
-		document.addEventListener("deviceready", function () {
+        vm.imageSrc = "";
+		vm.takePic = function() {
+			var options = {
+				quality : 50,
+				destinationType : Camera.DestinationType.DATA_URL,
+				sourceType : Camera.PictureSourceType.CAMERA,
+				allowEdit : false,
+				encodingType : Camera.EncodingType.JPEG,
+				targetWidth : 100,
+				targetHeight : 100,
+				popoverOptions : CameraPopoverOptions,
+				saveToPhotoAlbum : false,
+				correctOrientation : true
+			};
 
-		    vm.type = $cordovaNetwork.getNetwork()
+			$cordovaCamera.getPicture(options).then(function(imageData) {
+				vm.imageSrc = "data:image/jpeg;base64," + imageData;
+			}, function(err) {
+				alert("deu ruim");
+			});
+		}
+		vm.selectPic = function() {
+			var options = {
+				destinationType : Camera.DestinationType.FILE_URI,
+				//sourceType : Camera.PictureSourceType.CAMERA,
+				sourceType : Camera.PictureSourceType.PHOTOLIBRARY,
+			};
 
-		    vm.isOnline = $cordovaNetwork.isOnline()
+			$cordovaCamera.getPicture(options).then(function(imageURI) {
+				vm.imageSrc = imageURI;
+			}, function(err) {
+				// error
+			});
 
-		    vm.isOffline = $cordovaNetwork.isOffline()
+		}
 
+		document.addEventListener("deviceready", function() {
 
-		    // listen for Online event
-		    $rootScope.$on('networkOffline', function(event, networkState){
-		      var onlineState = networkState;
-		    })
+			vm.type = $cordovaNetwork.getNetwork()
 
-		    // listen for Offline event
-		    $rootScope.$on('networkOffline', function(event, networkState){
-		      var offlineState = networkState;
-		    })
+			vm.isOnline = $cordovaNetwork.isOnline()
 
-		  }, false);
-		
+			vm.isOffline = $cordovaNetwork.isOffline()
+
+			// listen for Online event
+			$rootScope.$on('networkOffline', function(event, networkState) {
+				var onlineState = networkState;
+			})
+
+			// listen for Offline event
+			$rootScope.$on('networkOffline', function(event, networkState) {
+				var offlineState = networkState;
+			})
+
+		}, false);
+
 		this.beep = function() {
 			$cordovaDialogs.beep(3);
 		};
 		this.prompt = function() {
-			$cordovaDialogs.prompt('Please Login', "Custom title",['a','b']).then(
-					function(result) {
-						$cordovaDialogs.alert("Input: " + result.input1
-								+ "\n Button index : " + result.buttonIndex);
-					});
+			$cordovaDialogs
+					.prompt('Please Login', "Custom title", [ 'a', 'b' ]).then(
+							function(result) {
+								$cordovaDialogs.alert("Input: " + result.input1
+										+ "\n Button index : "
+										+ result.buttonIndex);
+							});
 
 		};
 		vm.confirm = function() {
@@ -49,12 +88,12 @@
 
 			$cordovaDialogs.alert('Wow!', alertClosed, "titulo", "dismiss");
 		};
-		
+
 		function alertClosed() {
 			$cordovaDialogs.alert('close');
 		}
 		vm.vib = function() {
-		$cordovaVibration.vibrate(500);
+			$cordovaVibration.vibrate(500);
 		}
 		/*
 		 * $scope.alert = function () { $scope.action = "Alert";

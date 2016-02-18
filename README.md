@@ -37,3 +37,8 @@ document.addEventListener("deviceready", function () {
 
 		  }, false);
 
+
+para a camera
+
+http://ngcordova.com/docs/plugins/camera/
+cordova plugin add cordova-plugin-camera

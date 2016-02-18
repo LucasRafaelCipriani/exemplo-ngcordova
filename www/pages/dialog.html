@@ -7,7 +7,15 @@
 	ng-click="vm.prompt()">Prompt</button>
 <button class="button button-full button-positive" ng-click="vm.beep()">Beep</button>
 <button class="button button-full button-positive" ng-click="vm.vib()">vib</button>
+<button class="button button-full button-positive" ng-click="vm.takePic()">Take Picture</button>
+<button class="button button-full button-positive" ng-click="vm.selectPic()">Select Picture</button>
 Online :{{vm.isOnline}}
 Offline :{{vm.isOffline}}
+
+<div class="card">
+<div class="item item-image">
+<img alt="" ng-src="{{vm.imageSrc}}">
+</div>
+</div>
 
 </ion-content> </ion-view>
